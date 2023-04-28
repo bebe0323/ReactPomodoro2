@@ -27,10 +27,9 @@ function TodoItem({task, onToggleComplete, onEdit}) {
 
     return (
         <div>
-            {task.id}
             
             {isEditing === true ? (
-                <div>
+                <div className='eachTask'>
                     <input 
                         className='checkBoxTask'
                         type="checkbox" 
@@ -49,8 +48,8 @@ function TodoItem({task, onToggleComplete, onEdit}) {
                         checked={task.completed} 
                         onChange={() => onToggleComplete(task.id)}
                     />
-                <span className='todoTask'>{task.text}</span>
-                <button className='buttonAddTask' onClick={handleEditClick}>Edit</button>
+                    <span className='todoTask'>{task.text}</span>
+                    <button className='buttonAddTask' onClick={handleEditClick}>Edit</button>
                 </div>
             )}
         </div>
@@ -118,8 +117,6 @@ export default function App() {
         setTasks(tasks.filter(a => a.id !== id));
     }
 
-   
-
     return(
         <>
             <input className='inputTask'
@@ -150,22 +147,21 @@ export default function App() {
             </ul>
 
             {Object.keys(completedTasks).length > 0 ? (<h3 className='headerCompleted'>Completed Tasks</h3>) : <p></p>}
-            <ol>
-                {completedTasks.map((task) => {
-                    if(task.id !== 0) {
-                        return <li key={task.id}><p className='completedTasks'>{task.text}</p></li> }
-                        else {
-                            return null;
-                        }
-                    }
-                )}
-            </ol>
+            
+            {completedTasks.map((task) => {
+                if(task.id !== 0) {
+                    return ( 
+                        <div className='eachTask'>
+                            <span className='todoTask'>{task.text}</span> 
+                            <button className='buttonAddTask' onClick={() => setCompletedTasks(completedTasks.filter(a => a.id !== task.id))}>Delete</button>
+                        </div>
+                    )
+                }
+                else {
+                    return null;
+                }
+            }
+            )}
         </>
     )
 }
-
-// export default function App() {
-//     return (
-//         <h1>Hello</h1>
-//     )
-// }
