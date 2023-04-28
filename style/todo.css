@@ -1,0 +1,177 @@
+#todoModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.todoContent {
+    background-color: #212121;
+    padding: 20px;
+    
+    /* border: 1px solid #888; */
+    width: 30%; /* Could be more or less, depending on screen size */
+    position: fixed;
+    margin: 20% 35% auto; /* 15% from the top and 30% from the left */
+}
+
+#todoButton {
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    font-size: 41px;
+    transition-duration: 0.4s;
+    outline: none;
+}
+
+#todoClose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#todoClose:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.inputTask {
+    color: #8707ff;
+    /* color: white; */
+    border: 2px solid #8707ff;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    /* max-width: 190px; */
+    width: 150px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+span {
+    display: inline-block;
+}
+
+.todoTask { /* inside the modal */
+    /* color: #8707ff; */
+    color: white;
+    border: 2px solid #8707ff;
+    border-radius: 10px;
+    padding: 10px 10px;
+    background: transparent;
+    width: 95%;
+    /* margin-right: 10px; */
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between; /* optional */    
+}
+
+.tasksModal {
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.buttonAddTask {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #6c5ce7;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+}
+
+.deleteButton {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #6c5ce7;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #a29bfe;
+
+    margin-left: auto;
+}
+
+.delete {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+}
+
+
+.eachTask {
+    display: flex;
+}
+
+.headerCompleted {
+    color: white;
+}
+
+.completedTasks {
+    color: white;
+    border: 2px solid #8707ff;
+    border-radius: 10px;
+    padding: 10px 10px;
+    background: transparent;
+    width: 90%;
+    /* margin-right: 10px; */
+
+    display: flex;
+    justify-content: space-between; /* optional */    
+}
+
+.tasksInUL {
+    padding: 0px;
+}
+
+.buttonSave {
+    margin-right: 5px;
+}
+
+.checkBoxTask {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 16px;
+    line-height: 1;
+}
+
+ol {
+    color: white;
+}
+
+.editInput {
+    width: 50%;
+}
