@@ -18,10 +18,10 @@ This is a React application that allows users to use a Pomodoro timer to manage 
 * Javascript
 
 ## Installation
-1. Download the project zip file and open it
+1. Download the project zip file and open it.
 2. On your terminal, run the 'npm install' command to download the dependencies.
 3. In package.json file, delete the second line - "homepage": "https://bebe0323.github.io/ReactPomodoro2",
-4. On your terminal, run the 'npm start'
+4. On your terminal, run the 'npm start'.
 5. Now, in your local machine, the project is running.
 
 ## Credits
