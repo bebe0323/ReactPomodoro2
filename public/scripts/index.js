@@ -49,6 +49,7 @@ let ok = 0;
 
 function run_time() {
     console.log("starting");
+    
     everysecond = setInterval(function() {
         if(ok == 1) clearInterval(everysecond);
         second --;
@@ -77,8 +78,9 @@ function run_time() {
         }
         if(minute <= 0 && second <= 0) {
             clearInterval(everysecond);
-            var audio = new Audio('../assets/ReelAudio-14362.mp3');
+            var audio = new Audio('../assets/mot.mp3');
             audio.play();
+            console.log('session finished');
             change_session_break();
         }
         
