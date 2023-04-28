@@ -7,10 +7,10 @@ let startStop = 0;
 let sessionCounter = 1;
 let sessionCheck = 0;
 //
-let sessionMinute = 50;
-let breakMinute = 10;
+let sessionMinute = 25;
+let breakMinute = 5;
 const Y = 59;
-let minute = 50;
+let minute = 25;
 let second = 0;
 //
 
@@ -138,10 +138,10 @@ saveChangesButton.addEventListener("click", function() {
     let NewSessionDuration = document.getElementById("NewSessionDuration").value;
     let NewBreakDuration = document.getElementById("NewBreakDuration").value;
     if(NewSessionDuration == "") {
-        NewSessionDuration = 50;
+        NewSessionDuration = 25;
     }
     if(NewBreakDuration == "") {
-        NewBreakDuration = 10;
+        NewBreakDuration = 5;
     }
 
     if(isNaN(NewSessionDuration) == true || isNaN(NewBreakDuration) == true) {
@@ -181,11 +181,11 @@ restartButton.addEventListener("click", function() {
 
     NewSessionDuration.value = '';
     NewBreakDuration.value = '';
-    sessionMinute = 50;
-    breakMinute = 10;
+    sessionMinute = 25;
+    breakMinute = 5;
     minute = sessionMinute;
     second = 0;
-    remainingMinute.textContent = 50;
+    remainingMinute.textContent = 25;
     remainingSecond.textContent = "00";
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -195,10 +195,10 @@ restartButton.addEventListener("click", function() {
 
     // after the button pressed, input value becomes placeholder
     var sessionForCSS = document.querySelector('#NewSessionDuration');
-    sessionForCSS.placeholder = 50;
+    sessionForCSS.placeholder = 25;
     sessionForCSS.value = "";
     var breakForCSS = document.querySelector('#NewBreakDuration');
-    breakForCSS.placeholder = 10;
+    breakForCSS.placeholder = 5;
     breakForCSS.value = "";
     
     
