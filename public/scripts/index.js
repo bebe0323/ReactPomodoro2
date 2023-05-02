@@ -191,6 +191,7 @@ restartButton.addEventListener("click", function() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     switchButton.textContent = "Start";
     sessionNumber.textContent = "Session: 1";
+    sessionCounter = 1;
 
 
     // after the button pressed, input value becomes placeholder
